@@ -1,6 +1,8 @@
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy_serializer import SerializerMixin
 from datetime import datetime
+from sqlalchemy.orm import validates
+from sqlalchemy import CheckConstraint
 
 
 #Author, Article, Author_Article
@@ -28,6 +30,8 @@ class Article(db.Model, SerializerMixin):
 
     id = db.Column(db.Integer , primary_key =True)
     title = db.Column(db.String, nullable=False)
+    topic = db.Column(db.String, nullable=False)
+    description = db.Column(db.String, nullable=False)
     body =db.Column(db.String, nullable=False)
     created_at = db.Column(db.DateTime, server_default=db.func.now())
     updated_at = db.Column(db.DateTime, onupdate=db.func.now())
@@ -51,5 +55,18 @@ class Author_Article(db.Model, SerializerMixin):
     
     def __repr__(self):
         return f'author_article review is {self.review}'
+    
+#Validations
+    @validates('topic')
+    def validate_topic(self, key, value):
+        if value not in ['Parenthood', 'Recipies', 'Sports', 'Fashion']:
+            raise ValueError("Topics must be one of: 'Parenthood', 'Recipies', 'Sports', 'Fashion'")
+        return value
+
+    @validates('description')
+    def validate_description(self, key, value):
+        if len(value.strip()) < 100:
+            raise ValueError("Description must be at least 100 characters long.")
+        return value
 
 
