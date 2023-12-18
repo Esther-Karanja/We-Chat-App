@@ -5,10 +5,12 @@ from flask_cors import CORS
 from models import db, Article
 
 app = Flask(__name__)
+CORS(app)
+
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///app.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.json.compact = False
-CORS(app)
+
 
 migrate = Migrate(app, db)
 
@@ -80,7 +82,7 @@ def add_article():
     return response
 
 #patch an article
-@app.route('/articles/<int:id>', methods =['GET', 'PATCH'])
+@app.route('/articles/<int:id>', methods =['PATCH'])
 def update_article(id):
 
     article = Article.query.filter_by(id=id).first()
