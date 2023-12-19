@@ -1,0 +1,83 @@
+{
+    "articles": [
+      {
+        "id": 1,
+        "name": "oversized Silhouettes",
+        "title": "Trending Fashion 2023",
+        "description": "Baggy jeans, oversized blazers.",
+        "category": "Fashion",
+        "rating": 5,
+        "image_url": "https://i.pinimg.com/736x/85/5a/57/855a573bed725e7242cc8cc34aa0a935.jpg"
+    },
+
+    {
+        "id": 2,
+        "name": "Maxi skirt and Denim jacket",
+        "title": "How to style a maxi Skirt with denim",
+        "description": "Maxi Skirts, light-wash denim.",
+        "category": " Spring Fashion",
+        "rating": 5,
+        "image_url": "https://i.pinimg.com/1200x/71/32/07/7132079dae1a6bd34cef1687b5e5cc2d.jpg"
+    },
+
+    {
+        "id": 3,
+        "name": "",
+        "title": "Winter Outfit",
+        "description": "gray coat, black sweater, black booties, .",
+        "category": "Winter Fashion",
+        "rating": 5,
+        "image_url": "https://images.liketoknow.it/9b34ca0d-59a9-11eb-a33d-0242ac110004?v=0&auto=format&fm=webp&w=450&q=80&dpr=1"
+    },
+
+    {
+        "id": 4,
+        "name": "Manchester United",
+        "title": "History of the Club",
+        "description": "Manchester United Football Club, commonly referred to as Man United, or simply United, is a professional football club based in Old Trafford, Greater Manchester, England. The club competes in the Premier League, the top division in the English football league system",
+        "category": "Premier League Sports",
+        "rating": 5,
+        "image_url": "https://assets.goal.com/v3/assets/bltcc7a7ffd2fbf71f5/blt7ba0ac39984c5175/60da822493730d0ef6f789eb/07cdd1d635979d07cdb00842b5e495d15b4ba881.jpg?auto=webp&format=pjpg&width=3840&quality=60"
+    },
+
+    {
+        "id": 5,
+        "name": "Barcelona",
+        "title": "",
+        "description": "utbol Club Barcelona, commonly referred to as Barcelona and colloquially known as Barça, is a professional football club based in Barcelona, Catalonia, Spain, that competes in La Liga, the top flight of Spanish football.",
+        "category": "LaLiga",
+        "rating": 5,
+        "image_url": "https://img.vavel.com/mini-photo-5949569903545662802-y-1696852270230.webp"
+    }
+],
+"authors": [
+    {
+      "id": 1,
+      "author_name": "Lucy Kariuki",
+      "email": "lkariuki@gmail.com",
+      "password": "Lkariuki01",
+      "PhoneNumber": "07345678990"
+    },
+    {
+      "id": 2,
+      "author_name": "Esther Karanja",
+      "email": "Ekaranja@gmail.com",
+      "password": "Ekaranja02",
+      "PhoneNumber": "0734567543" 
+    },
+    {
+      "id": 3,
+      "author_name": "Michelle Kyalo",
+      "email": "Mkyalo@gmail.com",
+      "password": "Mkyalo03",
+      "PhoneNumber": "0723456748"
+    },
+    {
+      "id": 4,
+      "author_name": "Martin WAmbugu",
+      "email": "Mwambugu@gmail.com",
+      "password": "Mwambugu04",
+      "PhoneNumber": "0793456212"
+    }
+]
+}

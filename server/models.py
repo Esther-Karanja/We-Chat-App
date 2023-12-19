@@ -57,7 +57,7 @@ class Author_Article(db.Model):#SerializerMixin):
 #Validations
     @validates('topic')
     def validate_topic(self, key, value):
-        if value not in ['Parenthood', 'Recipies', 'Sports', 'Fashion']:
+        if value not in ['Recipies', 'Sports', 'Fashion']:
             raise ValueError("Topics must be one of: 'Parenthood', 'Recipies', 'Sports', 'Fashion'")
         return value
 
