@@ -1,5 +1,5 @@
 from flask_sqlalchemy import SQLAlchemy
-from sqlalchemy_serializer import SerializerMixin
+#from sqlalchemy_serializer import SerializerMixin
 from datetime import datetime
 from sqlalchemy.orm import validates
 from sqlalchemy import CheckConstraint
@@ -9,7 +9,7 @@ from sqlalchemy import CheckConstraint
 
 db = SQLAlchemy()
 
-class Author(db.Model, SerializerMixin):
+class Author(db.Model):#SerializerMixin):
     __tablename__ = 'authors'
 
     serialize_rules =('-author_articles.author',)
@@ -23,15 +23,13 @@ class Author(db.Model, SerializerMixin):
         return f'author name is {self.name}'
 
 
-class Article(db.Model, SerializerMixin):
+class Article(db.Model):#SerializerMixin):
     __tablename__ = 'articles'
 
     serialize_rules =('-author_articles.author',)
 
     id = db.Column(db.Integer , primary_key =True)
     title = db.Column(db.String, nullable=False)
-    topic = db.Column(db.String, nullable=False)
-    description = db.Column(db.String, nullable=False)
     body =db.Column(db.String, nullable=False)
     created_at = db.Column(db.DateTime, server_default=db.func.now())
     updated_at = db.Column(db.DateTime, onupdate=db.func.now())
@@ -41,7 +39,7 @@ class Article(db.Model, SerializerMixin):
     def __repr__(self):
         return f'article title is {self.title} and description is {self.body}.'
 
-class Author_Article(db.Model, SerializerMixin):
+class Author_Article(db.Model):#SerializerMixin):
 
     __tablename__ ='author_articles'
 

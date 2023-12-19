@@ -32,8 +32,6 @@ def get_articles():
             "id": article.id,
             "title": article.title,
             "body": article.body,
-            "topic": article.topic,
-            "description": article.description,
             "created_at": article.created_at,
             "updated_at": article.updated_at
         }
